@@ -13,6 +13,9 @@ body{
   margin-top: .5rem;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
+h1{
+  text-align: center;
+}
 
 /* Global CSS ENDS*/
 
@@ -33,6 +36,13 @@ body{
   /* border: 2px solid salmon; */
 }
 
+.home{
+  border: 2px solid black;
+}
+
+.arrow{
+  border: 2px solid black;
+}
 a{
   text-decoration: none;
 }
@@ -42,9 +52,9 @@ a{
   margin-bottom: 3rem;
 }
 
-.h1{
+/* .h1{
   animation: dFade 2s 1;
-}
+} */
 
 .h2{
   font-size: 8rem;
@@ -55,7 +65,7 @@ a{
   background-clip: text;
   -webkit-background-clip: text;
   /* text-shadow: 2px 2px 2px rgba(255, 255, 255, 0.212); */
-  animation: lFade 2s 1;
+  /* animation: lFade 2s 1; */
   /* animation-delay: 1s; */
 }
 
@@ -105,3 +115,63 @@ a{
 
 
 /* Arrow Animation Ends */
+
+
+/* Comments Styles */
+.comments{
+  border: 2px solid gold;
+  width: auto;
+  height: auto;
+  margin: 3rem 0 3rem 0;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+  padding: 2rem;
+}
+
+.posts-main,.comments-main{
+  border: 2px solid darkblue;
+  /* width: fit-content; */
+  /* min-width: 30rem;
+  max-width: 48%; */
+
+}
+
+.post-display,.comment-display{
+  overflow-y: scroll;
+  width: 50rem;
+  height: 400px; 
+  
+}
+/* Comments Styles ENDS */
+
+
+/* POST styles */
+.post-display{
+  display: grid;
+  /* flex-wrap: column wrap; */
+  padding: 1.2rem;
+  justify-content: center;
+}
+
+.post-display button{
+  margin-top: .25rem;
+  /* display: block; */
+  height: 15rem;
+  /* width: 30%;
+  margin-left: 20%; */
+  min-width: 10rem;
+  max-width: 20rem;
+
+}
+
+.post-display button *{
+  /* border: 2px dotted purple; */
+
+}
+.post-name{
+  font-weight: 700;
+  margin: .5rem 0 .5rem 0;
+}
+/* POST styles ENDS*/
+
