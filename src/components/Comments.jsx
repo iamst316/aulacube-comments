@@ -8,12 +8,23 @@ export default function(){
     const [posts, setPosts] = useState([]);
     const [data,setData] = useState([]);
     const [comments, setComments] = useState([]);
+    const [filterId, SetFilterId] = useState(0);
 
     function ShowComments(num){
         // alert("ji")
         const filter = data.filter(i=>i.postId==num)
         setComments(filter);
         console.log("comments",comments);
+    }
+
+    function FilterPosts(){
+        const filter = data.filter(i=>i.postId==filterId)
+        setPosts(filter);
+    }
+
+    function Clear(){
+        const filter = data.filter(i=>i.id%5==1)
+        setPosts(filter);
     }
 
     useEffect(()=>{
@@ -45,9 +56,11 @@ export default function(){
             <h1>Posts</h1>
             <div className="filter">
                 
-                <input type="number" className="filter-input" placeholder="Enter Post ID to Filter" />
+                <input type="number" onChange={(e)=> SetFilterId(e.target.value)} className="filter-input" placeholder="Enter Post ID to Filter" />
 
-                <button>Filter</button>
+                <button onClick={FilterPosts}>Filter</button>
+
+                <button onClick={Clear}>Clear</button>
 
             </div>
 
@@ -62,7 +75,7 @@ export default function(){
             <h1>Comments</h1>
             
             <div className="comment-display">{comments.length>0 ? comments.map((comment)=>{
-                return <Comment comment={comment} />
+                return <div className="comment-entry"><Comment comment={comment} /></div>
             }):
             <h1>No Comments Here!</h1>
             }</div>
