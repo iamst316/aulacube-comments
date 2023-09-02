@@ -1,42 +1,107 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+/* Global CSS */
+
+*{
+  margin: 0;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+html{
+  scroll-behavior: smooth;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
+body{
+  background-color: rgb(248, 247, 247);
+  margin-top: .5rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Global CSS ENDS*/
+
+.main{
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid red;
+  margin: auto;
+  width: 98%;
+  border-radius: .4rem;
+  box-shadow: 2px 2px 3px rgb(117, 117, 117);
+}
+
+.welcome{
+  padding: 6rem;
+  /* border: 2px solid salmon; */
+}
+
+a{
+  text-decoration: none;
+}
+
+.h1,.h2{
+  font-size: 7rem;
+  margin-bottom: 3rem;
+}
+
+.h1{
+  animation: dFade 2s 1;
+}
+
+.h2{
+  font-size: 8rem;
+  /* background: url("./assets/img/1000_F_349954362_6uAf1A4T1NnkqhtLzVWNse3d8eBPFfqC.jpg"); */
+  /* color: rgba(255, 243, 243, 0); */
+  /* background-color: #ffffff; */
+  font-weight: 800;
+  background-clip: text;
+  -webkit-background-clip: text;
+  /* text-shadow: 2px 2px 2px rgba(255, 255, 255, 0.212); */
+  animation: lFade 2s 1;
+  /* animation-delay: 1s; */
+}
+
+/* Arrow Animation */
+
+.arrow {
+    
+  transform: translate(-50%, -50%);
+  transform: rotate(0deg);
+  cursor: pointer;
+  margin-top: 1.5rem;
+}
+
+.arrow span {
+  display: block;
+  width: 1.5vw;
+  height: 1.5vw;
+  border-bottom: 5px solid rgb(0, 0, 0);
+  border-right: 5px solid rgb(0, 0, 0);
+  transform: rotate(45deg);
+  margin: -10px;
+  animation: animate 2s infinite;
+}
+
+.arrow span:nth-child(2) {
+  animation-delay: -0.2s;
+}
+
+.arrow span:nth-child(3) {
+  animation-delay: -0.4s;
+}
+
+@keyframes animate {
+  0% {
+      opacity: 0;
+      transform: rotate(45deg) translate(-20px, -20px);
   }
-  to {
-    transform: rotate(360deg);
+  50% {
+      opacity: 1;
+  }
+  100% {
+      opacity: 0;
+      transform: rotate(45deg) translate(20px, 20px);
   }
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-}
 
-.card {
-  padding: 2em;
-}
 
-.read-the-docs {
-  color: #888;
-}
+/* Arrow Animation Ends */
