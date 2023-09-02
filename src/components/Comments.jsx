@@ -56,7 +56,7 @@ export default function(){
             <h1>Posts</h1>
             <div className="filter">
                 
-                <input type="number" onChange={(e)=> SetFilterId(e.target.value)} className="filter-input" placeholder="Enter Post ID to Filter" />
+                <input type="number" onChange={(e)=> SetFilterId(e.target.value)} className="filter-input" placeholder="#ID" />
 
                 <button onClick={FilterPosts}>Filter</button>
 
