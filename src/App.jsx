@@ -14,7 +14,7 @@ function App() {
         <Home />
       </div>
 
-      <div class="arrow">
+      <div className="arrow">
         <a href="#comments">
           <span></span>
           <span></span>
